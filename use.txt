@@ -1,0 +1,13 @@
+Intended Use
+------------
+OTABase is a research framework for evaluating the robustness of LTE baseband implementations against memory corruption vulnerabilities.  
+It is intended to be used in controlled research environments (e.g., academic testbeds, shielded RF labs) for security analysis and reproducibility of our paper’s findings.  
+The framework can generate, transmit, and evaluate RRC/NAS protocol test cases to identify memory safety issues.
+
+Limitations
+-----------
+- OTABase is NOT intended for use in operational cellular networks.  
+- Experiments require specialized RF hardware and a shielded test environment; running tests on live commercial networks is prohibited.  
+- The framework is provided for research and educational purposes only; it must not be used for malicious exploitation.  
+- Due to hardware requirements, the artifact package only supports offline demonstrations (message generation, mutation, oracle simulation) unless the user has access to a proper RF testbed.
+- Since OTABase treats commercial basebands as black-box systems, final confirmation and root-cause analysis require vendor-side investigation with access to internal crash dumps or source code.

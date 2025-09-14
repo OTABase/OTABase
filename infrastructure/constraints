@@ -1,0 +1,25 @@
+OTABase Artifact – Infrastructure Constraints
+=============================================
+
+Required Infrastructure
+-----------------------
+- Ubuntu 18.04 or 22.04 LTS server
+- Software-Defined Radio (USRP B210) with antenna
+- Programmable SIM card and smart card reader
+- Commercial test smartphones (reproducing our findings requires older firmware versions with known 1-day vulnerabilities, as the issues have been patched)
+- Faraday cage or equivalent RF shielding environment
+
+Constraints
+-----------
+The OTABase framework relies on over-the-air communication between a software-defined base station and commercial smartphones.  
+This setup requires:
+- Transmission and reception of LTE NAS/RRC messages over real radio channels.
+- Shielded environments (e.g., Faraday cage) to ensure no interference with public cellular networks.
+
+Due to these requirements, OTABase cannot be executed on public cloud-based research infrastructures (e.g., CloudLab, Chameleon, FABRIC, SPHERE, Google Colab), which do not provide SDR peripherals, programmable SIMs, or controlled RF environments.
+
+Rationale
+---------
+The use of physical RF components and real smartphones is essential to run OTABase against commercial LTE basebands.  
+Without these hardware dependencies and shielding requirements, end-to-end experiments are not feasible.  
+Therefore, the artifact package provides the full implementation, a detailed README containing step-by-step setup guides, which can be used to deploy OTABase in a dedicated RF testbed when the required hardware is available.
