@@ -23,7 +23,7 @@ It combines two major components:
 - Extends [srsRAN](https://github.com/srsran/srsRAN_4G) to send generated test cases over-the-air to the testing UE.  
 - Includes network-side state management, test message transmission/response handling, and crash detection.
 
-2. **Test Case Generator** (`artifact/otabase/test-case-generator/`)  
+2. **Test Case Generator** (`artifact/test-case-generator/`)  
 - Generates RRC and NAS test cases by creating standard-conformant base messages and mutating target fields.
 - Implemented in Python with [pycrate](https://github.com/P1sec/pycrate).
 
@@ -84,7 +84,7 @@ See [OTABase Execution Framework](#otabase-execution-framework) for detailed set
 
 ### Quick Start
 
-After satisfiying the [dependencies](#dependencies), you need to install `artifact/otabase` and `artifact/otabase/test-case-generator`. 
+After satisfiying the [dependencies](#dependencies), you need to install `artifact/otabase` and `artifact/test-case-generator`. 
 
 ```bash
 # OTABase over-the-air framework
@@ -95,11 +95,11 @@ chmod +x install.sh
 ```
 
 
-OTABase's test case generator (`artifact/otabase/test-case-generator/`) features automatic setup - just clone and run:
+OTABase's test case generator (`artifact/test-case-generator/`) features automatic setup - just clone and run:
 
 ```bash
 # OTABase test case generator
-cd artifact/otabase/test-case-generator
+cd artifact/test-case-generator
 chmod +x run.sh
 ./run.sh 
 ```
@@ -139,7 +139,7 @@ cmake ..
 make -j$(nproc)
 
 # 3. Install otabase's test case generator (python, virtual environment)
-cd artifact/otabase/test-case-generator
+cd artifact/test-case-generator
 python3 -m venv otabase_venv
 source otabase_venv/bin/activate  # On Windows: otabase_venv\Scripts\activate
 
