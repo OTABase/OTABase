@@ -1,0 +1,7 @@
+# OTABase - Over-the-Air LTE Baseband Testing Framework
+# Requirements file for Python dependencies
+
+pandas>=2.1.4
+pycrate==0.7
+
+
